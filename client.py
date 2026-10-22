@@ -11,7 +11,6 @@ print("ready")
 
 
 
-# connection_state = b'0'
 
 
 
@@ -25,11 +24,10 @@ while pressed_key != ('esc'):   # send loop
     massage = str(pressed_key).encode()
 
     start_time = time.time()                       # start time 
-    client.sendto(massage, ('localhost', 8080))    # send the key name
-    data , address = client.recvfrom(1024)         
+    client.sendto(massage, ('192.168.1.12', 8080))    # send the keyboard button name
+    data , address = client.recvfrom(1024)         # 
     latency = (time.time() - start_time) * 1000    # latency 
 
-    #connection_state = data
 
     print(str(latency)[:5] + "ms")
 
