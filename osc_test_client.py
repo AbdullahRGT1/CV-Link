@@ -11,7 +11,7 @@ import sys
 
 # Match these three values to the Create OSC Server setup in Bp_test.
 TARGET_IP = "192.168.1.2"  # Use the Unreal PC's LAN IPv4 address from another device.
-TARGET_PORT = 8080        # Must equal the port configured in Bp_test.
+TARGET_PORT = 8000        # Must equal the port configured in Bp_test.
 OSC_ADDRESS = "/test"    # Must equal any address filter configured in Bp_test.
 
 PRESETS = {

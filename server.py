@@ -27,6 +27,7 @@ ip = get_ip()
 server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # preparing a temp socket to record the IP
 
 server.bind((ip, 8080))
+
 print(f"Server is listening on {ip}:8080")
 
 
@@ -49,7 +50,7 @@ while data.decode() != "close-class"  :              # receive loop
 
     data , address = server.recvfrom(1024)
     massage = data.decode()
-    if massage != "None":
+    if massage != ("None" or "close-class") :
         print(keys[str(massage)])
 
     #Keyboard section
